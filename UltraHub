@@ -1,17 +1,3 @@
---game.Players.LocalPlayer.Character.Humanoid.StateChanged:Connect(function(_, newState)
---    if newState == Enum.HumanoidStateType.Landed then
---        local explosion = Instance.new("Explosion")
---        explosion.Position = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
---        explosion.BlastRadius = 250 -- Adjust this value based on map size
---        explosion.Parent = workspace
---        explosion.Hit:Connect(function(part)
---            if part.Parent:FindFirstChildOfClass("Humanoid") and part.Parent ~= game.Players.LocalPlayer.Character then
---                part.Parent:FindFirstChildOfClass("Humanoid"):TakeDamage(1000)
---            end
---        end)
---    end
---end)
-
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Player = game.Players.LocalPlayer
 local Window = OrionLib:MakeWindow({Name = "Deludrix's Hub", HidePremium = false, IntroText = "Welcome to Deludrix's Hub!", SaveConfig = true, ConfigFolder = "TesterConfig"})
