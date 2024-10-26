@@ -163,6 +163,18 @@ GamesTab:AddButton({
     end    
 })
 
+GamesTab:AddButton({
+    Name = "Rooms: Fully Expanded Roleplay",
+    Callback = function()
+        OrionLib:MakeNotification({
+            Name = "This is in WIP",
+            Content = "Bugs might be caused",
+            Image = "rbxassetid://4483345998",
+            Time = 5
+        })
+    end    
+})
+
 GamesTab:AddLabel("More Soon!")
 
 -- Doors --
@@ -200,10 +212,6 @@ WorkingTab:AddSlider({
 
 local Section = WorkingTab:AddSection({
     Name = "PM 6:06"
-})
-
-local Section = WorkingTab:AddSection({
-    Name = "LocalCommands"
 })
 
 WorkingTab:AddSlider({
@@ -246,8 +254,51 @@ WorkingTab:AddButton({
       end    
 })
 
+
+-- Rooms: Fully Expanded Roleplay --
+
 local Section = WorkingTab:AddSection({
-    Name = "OtherCommands"
+    Name = "Rooms: Fully Expanded Roleplay"
+})
+
+WorkingTab:AddSlider({
+    Name = "Walkspeed",
+    Min = 0,
+    Max = 100,
+    Default = 16,
+    Color = Color3.fromRGB(255,255,255),
+    Increment = 1,
+    ValueName = "WS",
+    Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+    end    
+})
+
+WorkingTab:AddSlider({
+    Name = "JumpHeight",
+    Min = 0,
+    Max = 500,
+    Default = 50,
+    Color = Color3.fromRGB(255,255,255),
+    Increment = 1,
+    ValueName = "Height",
+    Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+    end    
+})
+
+WorkingTab:AddButton({
+    Name = "Heal",
+    Callback = function()
+        game.Players.LocalPlayer.Character.Humanoid.Health = 1000000000000000000000000000000000000000
+      end    
+})
+
+WorkingTab:AddButton({
+    Name = "-99 HP",
+    Callback = function()
+        game.Players.LocalPlayer.Character.Humanoid:TakeDamage(99)
+      end    
 })
 
 OrionLib:Init()
