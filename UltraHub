@@ -1,6 +1,6 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Player = game.Players.LocalPlayer
-local Window = OrionLib:MakeWindow({Name = "Deludrix's Hub", HidePremium = false, IntroText = "Welcome to Deludrix's Hub!", SaveConfig = true, ConfigFolder = "TesterConfig"})
+local Window = OrionLib:MakeWindow({Name = "Deludrix's Hub", HidePremium = true, IntroText = "Welcome to Deludrix's Hub!", SaveConfig = true, ConfigFolder = "TesterConfig"})
 
 OrionLib:MakeNotification({
 	Name = "Logged In",
