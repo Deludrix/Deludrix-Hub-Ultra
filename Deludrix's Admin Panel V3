@@ -22,6 +22,12 @@ local GamesTab = Window:MakeTab({
     PremiumOnly = false
 })
 
+local UltraTab = Window:MakeTab({
+    Name = "Multi-Scripts",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
 local WorkingTab = Window:MakeTab({
     Name = "Games",
     Icon = "rbxassetid://4483345998",
@@ -264,6 +270,15 @@ ExtrasTab:AddButton({
     Name = "Infinite Yield Loader",
     Callback = function()
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+       end    
+})
+
+UltraTab:AddLabel("Pressure Script by playvora")
+
+UltraTab:AddButton({
+    Name = "Launch Script",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com//Deludrix/Deludrix-Hub-Ultra/main/Pressure%20Script%20by%20playvora%20(scriptblox.com)"))()
        end    
 })
 
