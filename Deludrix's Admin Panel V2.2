@@ -47,14 +47,18 @@ local AnimationsTab = Window:MakeTab({
 local ExtrasTab = Window:MakeTab({
     Name = "Extras",
     Icon = "rbxassetid://4483345998",
-    PremiumOnly = true
+    PremiumOnly = false
 })
 
 
 local OtherTab = Window:MakeTab({
     Name = "Wip",
     Icon = "rbxassetid://4483345998",
-    PremiumOnly = false
+    if UserId == 7467186508 then
+        PremiumOnly = false
+    else
+        PremiumOnly = true
+    end
 })
 
 local Section = CommandsTab:AddSection({
