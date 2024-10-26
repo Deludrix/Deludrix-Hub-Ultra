@@ -17,6 +17,12 @@ OrionLib:MakeNotification({
 })
 
 local GamesTab = Window:MakeTab({
+    Name = "Versions",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local WorkingTab = Window:MakeTab({
     Name = "Games",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
@@ -35,10 +41,10 @@ local AnimationsTab = Window:MakeTab({
  })
 
 local OtherTab = Window:MakeTab({
-    Name = "Others",
+    Name = "Wip",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
- })
+})
 
 local Section = CommandsTab:AddSection({
     Name = "LocalCommands"
@@ -84,7 +90,7 @@ CommandsTab:AddButton({
       end    
 })
 
-CommandsTab:AddButton({
+OtherTab:AddButton({
     Name = "Seizure (WIP)",
     Callback = function()
         while wait(3) do 
@@ -95,20 +101,13 @@ CommandsTab:AddButton({
 })
 
 OtherTab:AddButton({
-    Name = "KILL ALL (Toxic Ah script)",
-    Callback = function()
-        game.Players.LocalPlayer:Kick("Rude")
-    end    
-})
-
-OtherTab:AddButton({
     Name = "Infinite ForceField",
     Callback = function()
         for _, d in pairs(workspace:GetDescendants()) do if d:IsA("Humanoid") then d:TakeDamage(10000000) end end
     end    
 })
 
-AnimationsTab:AddButton({
+OtherTab:AddButton({
     Name = "T Pose (Looped)",
     Callback = function()
         game.Players.LocalPlayer.Character:WaitForChild("Humanoid"):LoadAnimation((function() local anim = Instance.new("Animation") anim.AnimationId = "rbxassetid://89061392441717" return anim end)()):Play()
@@ -121,7 +120,7 @@ GamesTab:AddButton({
     Callback = function()
         OrionLib:MakeNotification({
             Name = "This is in WIP",
-            Content = "Script not released yet",
+            Content = "Bugs might be caused",
             Image = "rbxassetid://4483345998",
             Time = 5
         })
@@ -153,6 +152,36 @@ GamesTab:AddButton({
 })
 
 GamesTab:AddLabel("More Soon!")
+
+-- Doors --
+
+local Section = WorkingTab:AddSection({
+    Name = "Doors"
+})
+
+WorkingTab:AddButton({
+    Name = "Give Key",
+    Callback = function()
+        OrionLib:MakeNotification({
+            Name = "This is in WIP",
+            Content = "Script not released yet",
+            Image = "rbxassetid://4483345998",
+            Time = 5
+        })
+    end
+})
+
+WorkingTabTab:AddDropdown({
+	Name = "Give Item (WIP)",
+	Default = "1",
+	Options = {"None", "Lockpicks", "Vitamins", "Crucifix", "Skeleton Key", "More Items Later"},
+	Callback = function(Value)
+        Name = "This is in WIP",
+        Content = "Script not released yet",
+        Image = "rbxassetid://4483345998",
+        Time = 5
+	end    
+})
 
 -- Code Storage --
 
