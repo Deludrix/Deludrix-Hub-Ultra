@@ -176,10 +176,12 @@ WorkingTabTab:AddDropdown({
 	Default = "1",
 	Options = {"None", "Lockpicks", "Vitamins", "Crucifix", "Skeleton Key", "More Items Later"},
 	Callback = function(Value)
-        Name = "This is in WIP",
-        Content = "Script not released yet",
-        Image = "rbxassetid://4483345998",
-        Time = 5
+        OrionLib:MakeNotification({
+            Name = "This is in WIP",
+            Content = "Script not released yet",
+         Image = "rbxassetid://4483345998",
+            Time = 5
+        })
 	end    
 })
 
