@@ -1,6 +1,10 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Player = game.Players.LocalPlayer
-local Window = OrionLib:MakeWindow({Name = "Deludrix's Hub", HidePremium = false, IntroText = "Welcome to Deludrix's Hub!", SaveConfig = true, ConfigFolder = "TesterConfig"})
+local Window = OrionLib:MakeWindow({Name = "Deludrix's Hub", HidePremium = true, IntroText = "Welcome to Deludrix's Hub!", SaveConfig = true, ConfigFolder = "TesterConfig"})
+
+if UserId == 7467186508 then
+	HidePremium = false
+end
 
 OrionLib:MakeNotification({
 	Name = "Logged In",
@@ -43,7 +47,7 @@ local AnimationsTab = Window:MakeTab({
 local ExtrasTab = Window:MakeTab({
     Name = "Extras",
     Icon = "rbxassetid://4483345998",
-    PremiumOnly = false
+    PremiumOnly = true
 })
 
 
