@@ -40,6 +40,13 @@ local AnimationsTab = Window:MakeTab({
     PremiumOnly = false
  })
 
+local ExtrasTab = Window:MakeTab({
+    Name = "Extras",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+
 local OtherTab = Window:MakeTab({
     Name = "Wip",
     Icon = "rbxassetid://4483345998",
@@ -299,6 +306,13 @@ WorkingTab:AddButton({
     Callback = function()
         game.Players.LocalPlayer.Character.Humanoid:TakeDamage(99)
       end    
+})
+
+ExtrasTab:AddButton({
+    Name = "Infinite Yield Loader",
+    Callback = function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+       end    
 })
 
 OrionLib:Init()
