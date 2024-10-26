@@ -1,6 +1,6 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Player = game.Players.LocalPlayer
-local Window = OrionLib:MakeWindow({Name = "Deludrix's Hub", HidePremium = true, IntroText = "Welcome to Deludrix's Hub!", SaveConfig = true, ConfigFolder = "TesterConfig"})
+local Window = OrionLib:MakeWindow({Name = "Deludrix's Hub", HidePremium = false, IntroText = "Welcome to Deludrix's Hub!", SaveConfig = true, ConfigFolder = "TesterConfig"})
 
 OrionLib:MakeNotification({
 	Name = "Logged In",
@@ -127,6 +127,32 @@ GamesTab:AddButton({
         })
     end    
 })
+
+GamesTab:AddButton({
+    Name = "Rainbow Friends",
+    Callback = function()
+        OrionLib:MakeNotification({
+            Name = "This is in WIP",
+            Content = "Script not released yet",
+            Image = "rbxassetid://4483345998",
+            Time = 5
+        })
+    end    
+})
+
+GamesTab:AddButton({
+    Name = "Tower of Flood Escape 2",
+    Callback = function()
+        OrionLib:MakeNotification({
+            Name = "This is in WIP",
+            Content = "Script not released yet",
+            Image = "rbxassetid://4483345998",
+            Time = 5
+        })
+    end    
+})
+
+GamesTab:AddLabel("More Soon!")
 
 -- Code Storage --
 
