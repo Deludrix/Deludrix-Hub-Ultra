@@ -282,4 +282,29 @@ UltraTab:AddButton({
        end    
 })
 
+UltraTab:AddLabel("Dandy's World Script by Bac0nH1ckOff")
+
+UltraTab:AddButton({
+    Name = "Launch Script",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Bac0nHck/Scripts/main/Dandy's%20World"))("t.me/arceusxscripts")
+       end    
+})
+
+UltraTab:AddLabel("Coming soon...")
+
+UltraTab:AddButton({
+    Name = "Coming soon...",
+    Callback = function()
+        OrionLib:MakeNotification({
+            Name = "This is in WIP",
+            Content = "Script not released yet",
+            Image = "rbxassetid://4483345998",
+            Time = 5
+        })
+       end    
+})
+
+UltraTab:AddLabel("More Scripts Soon!")
+
 OrionLib:Init()
