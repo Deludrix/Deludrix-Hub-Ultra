@@ -2,10 +2,6 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Player = game.Players.LocalPlayer
 local Window = OrionLib:MakeWindow({Name = "Deludrix's Hub", HidePremium = true, IntroText = "Welcome to Deludrix's Hub!", SaveConfig = true, ConfigFolder = "TesterConfig"})
 
-if UserId == 7467186508 then
-	HidePremium = false
-end
-
 OrionLib:MakeNotification({
 	Name = "Logged In",
 	Content = "You are logged in as "..Player.Name.." ",
@@ -54,11 +50,7 @@ local ExtrasTab = Window:MakeTab({
 local OtherTab = Window:MakeTab({
     Name = "Wip",
     Icon = "rbxassetid://4483345998",
-    if UserId == 7467186508 then
-        PremiumOnly = false
-    else
-        PremiumOnly = true
-    end
+    PremiumOnly = false
 })
 
 local Section = CommandsTab:AddSection({
