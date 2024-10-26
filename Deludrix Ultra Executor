@@ -151,6 +151,18 @@ GamesTab:AddButton({
     end    
 })
 
+GamesTab:AddButton({
+    Name = "PM 6:06",
+    Callback = function()
+        OrionLib:MakeNotification({
+            Name = "This is in WIP",
+            Content = "Bugs might be caused",
+            Image = "rbxassetid://4483345998",
+            Time = 5
+        })
+    end    
+})
+
 GamesTab:AddLabel("More Soon!")
 
 -- Doors --
@@ -171,83 +183,71 @@ WorkingTab:AddButton({
     end
 })
 
-WorkingTabTab:AddDropdown({
-	Name = "Give Item (WIP)",
-	Default = "1",
-	Options = {"None", "Lockpicks", "Vitamins", "Crucifix", "Skeleton Key", "More Items Later"},
-	Callback = function(Value)
-        Print(Value)
-	end    
+WorkingTab:AddSlider({
+    Name = "Walkspeed (Wip)",
+    Min = 0,
+    Max = 100,
+    Default = 16,
+    Color = Color3.fromRGB(255,255,255),
+    Increment = 1,
+    ValueName = "WS",
+    Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+    end    
 })
 
--- Code Storage --
+-- PM 6:06
 
--- Animation storage : 89061392441717 + game.Players.LocalPlayer.Character:WaitForChild("Humanoid"):LoadAnimation(Instance.new("Animation", {AnimationId = "rbxassetid://1234567890"})):Play()
+local Section = WorkingTab:AddSection({
+    Name = "PM 6:06"
+})
 
--- game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
+local Section = WorkingTab:AddSection({
+    Name = "LocalCommands"
+})
 
--- game.Players.LocalPlayer.Character.Humanoid:TakeDamage(75)
+WorkingTab:AddSlider({
+    Name = "Walkspeed",
+    Min = 0,
+    Max = 100,
+    Default = 16,
+    Color = Color3.fromRGB(255,255,255),
+    Increment = 1,
+    ValueName = "WS",
+    Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+    end    
+})
 
--- game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Physics); game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0, 50, 0)
+WorkingTab:AddSlider({
+    Name = "JumpHeight",
+    Min = 0,
+    Max = 500,
+    Default = 50,
+    Color = Color3.fromRGB(255,255,255),
+    Increment = 1,
+    ValueName = "Height",
+    Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+    end    
+})
 
--- local player = game.Players.LocalPlayer
---local sword = Instance.new("Tool")
---sword.Name = "OP Sword"
---sword.RequiresHandle = true
---
---local handle = Instance.new("Part")
---handle.Name = "Handle"
---handle.Size = Vector3.new(1, 5, 1)
---handle.CanCollide = false
---handle.Anchored = false
---handle.Parent = sword
---
---sword.GripForward = Vector3.new(0, 0, -1)
---sword.GripPos = Vector3.new(0, 0, 0)
---sword.GripRight = Vector3.new(1, 0, 0)
---sword.GripUp = Vector3.new(0, 1, 0)
---sword.Parent = player.Backpack
+WorkingTab:AddButton({
+    Name = "Heal",
+    Callback = function()
+        game.Players.LocalPlayer.Character.Humanoid.Health = 1000000000000000000000000000000000000000
+      end    
+})
 
---sword.Activated:Connect(function()
---    local humanoid = sword.Parent:FindFirstChildOfClass("Humanoid")
---    if humanoid then
---        humanoid:TakeDamage(1000) -- Adjust the damage to be "overpowered"
---    end
---end)
+WorkingTab:AddButton({
+    Name = "-99 HP",
+    Callback = function()
+        game.Players.LocalPlayer.Character.Humanoid:TakeDamage(99)
+      end    
+})
 
--- while true do Instance.new("ForceField", game.Players.LocalPlayer.Character) wait(1) end
-
-
--- Unused: --
-
--- Unused Tab --
-
- --   local PremiumOnlyTab = Window:MakeTab({
- --       Name = "PremiumOnly",
- --       Icon = "rbxassetid://4483345998",
- --       PremiumOnly = true
- --   })
-
- -- OTHER
-
---  CommandsTab:AddToggle({
---    Name = "INF HP",
---    Default = false,
---    Callback = function(Value)
---        if Value == true then
---            game.Players.LocalPlayer.Character.Humanoid.Health = math.huge
---            else
---            game.Players.LocalPlayer.Character.Humanoid.Health = 100
---        end
---    end    
---})
-
---CommandsV2Tab:AddToggle({
---    Name = "Noclip",
---    Default = false,
---    Callback = function(Value)
---        game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = not Value
---    end    
---})
+local Section = WorkingTab:AddSection({
+    Name = "OtherCommands"
+})
 
 OrionLib:Init()
