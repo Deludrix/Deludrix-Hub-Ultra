@@ -291,6 +291,15 @@ UltraTab:AddButton({
        end    
 })
 
+UltraTab:AddLabel("Chat Bypasser By Skire")
+
+UltraTab:AddButton({
+    Name = "Launch Script",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/SkireScripts/Ouxie/main/Projects/simplebypass.lua"))()
+       end    
+})
+
 UltraTab:AddLabel("Coming soon...")
 
 UltraTab:AddButton({
