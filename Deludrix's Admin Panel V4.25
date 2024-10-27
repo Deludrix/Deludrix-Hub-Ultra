@@ -300,6 +300,15 @@ UltraTab:AddButton({
        end    
 })
 
+UltraTab:AddLabel("Hub by For92ad")
+
+UltraTab:AddButton({
+    Name = "Launch Script",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/SkibidiCen/MainMenu/main/Code"))()
+       end    
+})
+
 UltraTab:AddLabel("Coming soon...")
 
 UltraTab:AddButton({
