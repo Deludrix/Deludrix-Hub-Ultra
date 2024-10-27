@@ -1,0 +1,65 @@
+-- PM 6:06 Tab --
+
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Player = game.Players.LocalPlayer
+local Window = OrionLib:MakeWindow({Name = "Deludrix's Hub", HidePremium = true, IntroText = "PM 6:06 Script", SaveConfig = true, ConfigFolder = "TesterConfig"})
+
+local WorkingTab = Window:MakeTab({
+    Name = "Commands",
+    Icon = "rbxassetid://",
+    PremiumOnly = false
+})
+
+WorkingTab:AddButton({
+    Name = "Back To Hub",
+    Callback = function()
+        OrionLib:MakeNotification({
+            loadstring(game:HttpGet("https://raw.githubusercontent.com//Deludrix/Deludrix-Hub-Ultra/main/Deludrix's%20Admin%20Panel%20V4.25"))()
+        })
+    end    
+})
+
+WorkingTab:AddSlider({
+    Name = "Walkspeed",
+    Min = 0,
+    Max = 100,
+    Default = 16,
+    Color = Color3.fromRGB(255,255,255),
+    Increment = 1,
+    ValueName = "WS",
+    Callback = function(Value)
+        while true do
+            wait(0.01)
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+        end
+    end    
+})
+
+WorkingTab:AddSlider({
+    Name = "JumpHeight",
+    Min = 0,
+    Max = 500,
+    Default = 50,
+    Color = Color3.fromRGB(255,255,255),
+    Increment = 1,
+    ValueName = "Height",
+    Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+    end    
+})
+
+WorkingTab:AddButton({
+    Name = "Heal",
+    Callback = function()
+        game.Players.LocalPlayer.Character.Humanoid.Health = 1000000000000000000000000000000000000000
+      end    
+})
+
+WorkingTab:AddButton({
+    Name = "-99 HP",
+    Callback = function()
+        game.Players.LocalPlayer.Character.Humanoid:TakeDamage(99)
+      end    
+})
+
+OrionLib:Init()
