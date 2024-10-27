@@ -14,7 +14,7 @@ WorkingTab:AddButton({
     Name = "Back To Hub",
     Callback = function()
         OrionLib:MakeNotification({
-            loadstring(game:HttpGet("https://raw.githubusercontent.com//Deludrix/Deludrix-Hub-Ultra/main/Deludrix's%20Admin%20Panel%20V4.25"))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com//Deludrix/Deludrix-Hub-Ultra/main/Deludrix's%20Admin%20Panel%20V5.5"))()
         })
     end    
 })
