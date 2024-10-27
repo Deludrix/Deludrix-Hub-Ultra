@@ -28,12 +28,6 @@ local UltraTab = Window:MakeTab({
     PremiumOnly = false
 })
 
-local WorkingTab = Window:MakeTab({
-    Name = "Games",
-    Icon = "rbxassetid://",
-    PremiumOnly = false
- })
-
 local CommandsTab = Window:MakeTab({
    Name = "Commands",
    Icon = "rbxassetid://",
@@ -72,10 +66,7 @@ CommandsTab:AddSlider({
     Increment = 1,
     ValueName = "WS",
     Callback = function(Value)
-        while true do
-            wait(0.01)
-            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
-        end
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
     end    
 })
 
@@ -134,7 +125,12 @@ OtherTab:AddButton({
 GamesTab:AddButton({
     Name = "Doors",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com//Deludrix/Deludrix-Hub-Ultra/main/Doors"))()
+        OrionLib:MakeNotification({
+            Name = "This is in WIP",
+            Content = "Not Finished Script (all things are WIP in it)",
+            Image = "rbxassetid://4483345998",
+            Time = 5
+        })
     end    
 })
 
@@ -165,14 +161,14 @@ GamesTab:AddButton({
 GamesTab:AddButton({
     Name = "PM 6:06",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com//Deludrix/Deludrix-Hub-Ultra/main/PM%20606"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com//Deludrix/Deludrix-Hub-Ultra/main/PM%20SixOSix%20V2"))()
     end    
 })
 
 GamesTab:AddButton({
     Name = "Rooms: Fully Expanded Roleplay",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com//Deludrix/Deludrix-Hub-Ultra/main/Rooms%20Fixed%20Expanded%20Roleplay"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com//Deludrix/Deludrix-Hub-Ultra/main/Rooms%20Fixed%20Expanded%20Roleplay%20V2"))()
     end    
 })
 
