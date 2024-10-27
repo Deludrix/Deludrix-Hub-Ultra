@@ -72,7 +72,10 @@ CommandsTab:AddSlider({
     Increment = 1,
     ValueName = "WS",
     Callback = function(Value)
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+        while true do
+            wait(0.01)
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+        end
     end    
 })
 
@@ -131,12 +134,7 @@ OtherTab:AddButton({
 GamesTab:AddButton({
     Name = "Doors",
     Callback = function()
-        OrionLib:MakeNotification({
-            Name = "This is in WIP",
-            Content = "Bugs might be caused",
-            Image = "rbxassetid://4483345998",
-            Time = 5
-        })
+        loadstring(game:HttpGet("https://raw.githubusercontent.com//Deludrix/Deludrix-Hub-Ultra/main/Doors"))()
     end    
 })
 
@@ -167,104 +165,18 @@ GamesTab:AddButton({
 GamesTab:AddButton({
     Name = "PM 6:06",
     Callback = function()
-        OrionLib:MakeNotification({
-            Name = "This is in WIP",
-            Content = "Bugs might be caused",
-            Image = "rbxassetid://4483345998",
-            Time = 5
-        })
+        loadstring(game:HttpGet("https://raw.githubusercontent.com//Deludrix/Deludrix-Hub-Ultra/main/PM%20606"))()
     end    
 })
 
 GamesTab:AddButton({
     Name = "Rooms: Fully Expanded Roleplay",
     Callback = function()
-        OrionLib:MakeNotification({
-            Name = "This is in WIP",
-            Content = "Bugs might be caused",
-            Image = "rbxassetid://4483345998",
-            Time = 5
-        })
+        loadstring(game:HttpGet("https://raw.githubusercontent.com//Deludrix/Deludrix-Hub-Ultra/main/Rooms%20Fixed%20Expanded%20Roleplay"))()
     end    
 })
 
 GamesTab:AddLabel("More Soon!")
-
--- Doors --
-
-local Section = WorkingTab:AddSection({
-    Name = "Doors"
-})
-
-WorkingTab:AddButton({
-    Name = "Give Key",
-    Callback = function()
-        OrionLib:MakeNotification({
-            Name = "This is in WIP",
-            Content = "Script not released yet",
-            Image = "rbxassetid://4483345998",
-            Time = 5
-        })
-    end
-})
-
-WorkingTab:AddSlider({
-    Name = "Walkspeed (Soon)",
-    Min = 0,
-    Max = 100,
-    Default = 16,
-    Color = Color3.fromRGB(255,255,255),
-    Increment = 1,
-    ValueName = "WS",
-    Callback = function(Value)
-        -- game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value -- DO NOT BREAK THE DASHES --
-    end    
-})
-
--- PM 6:06
-
-local Section = WorkingTab:AddSection({
-    Name = "PM 6:06"
-})
-
-WorkingTab:AddLabel("Movement Speed and Jump Power are at Commands")
-
-WorkingTab:AddButton({
-    Name = "Heal",
-    Callback = function()
-        game.Players.LocalPlayer.Character.Humanoid.Health = 1000000000000000000000000000000000000000
-      end    
-})
-
-WorkingTab:AddButton({
-    Name = "-99 HP",
-    Callback = function()
-        game.Players.LocalPlayer.Character.Humanoid:TakeDamage(99)
-      end    
-})
-
-
--- Rooms: Fully Expanded Roleplay --
-
-local Section = WorkingTab:AddSection({
-    Name = "Rooms: Fully Expanded Roleplay"
-})
-
-WorkingTab:AddLabel("Movement Speed and Jump Power are at Commands")
-
-WorkingTab:AddButton({
-    Name = "Heal",
-    Callback = function()
-        game.Players.LocalPlayer.Character.Humanoid.Health = 1000000000000000000000000000000000000000
-      end    
-})
-
-WorkingTab:AddButton({
-    Name = "-99 HP",
-    Callback = function()
-        game.Players.LocalPlayer.Character.Humanoid:TakeDamage(99)
-      end    
-})
 
 ExtrasTab:AddButton({
     Name = "Infinite Yield Loader",
